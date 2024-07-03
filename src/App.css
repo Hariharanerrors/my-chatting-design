@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+.icon{
+  font-size: 52px;
+  border-radius: 50px;
+  border: 1px solid black;
+  background: red;
+  padding: 7px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.chatting-box {
+  background: aliceblue;
+  height: 100%;
+  width: 24%;
+  padding: 23px;
+  background-image: url();
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chatting-div {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.chatting-div p{
+  font-size: 23px;
+  color: black;
+  position: relative;
+  left: 90px;
+  margin: 0px 13px;
+  bottom: 7px;
 }
+.chatting-div h4 {
+  font-family: sans-serif;
+}
+.chatting-info{
+  margin: 57px 0px;
+}
+.chatting-info h3 {
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 400px;
+}
+.chatting-info h4 {
+  padding: 8px 0px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.chatting-detail h3 {
+  border: 1px solid #ebe9e9;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: sans-serif;
+  margin: 7px 9px;
+  padding: 7px 26px;
+  background: #fff9f9;
+}
+.chatting-ser {
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+.chatting-button form input  {
+  width: 88%;
+  border-radius: 12px;
+  border: 1px solid #2b2121;
+  padding: 4px 16px;
+}
+.chatting-button button {
+  margin-left: 4px;
+  border: 3px solid;
+  border-radius: 50px;
+}
+@media screen and (max-width:1039px) {
+  .chatting-box{
+      width: 100%;
+  }
+  .chatting-div p {
+      left: 700px;
+  }
+}
+@media screen and (max-width:1020px) {
+  .chatting-box{
+      width: 100%;
+  }
+  .chatting-div p {
+      left: 453px;
+  }
+}
+@media screen and (max-width:730px) {
+  .chatting-box{
+      width: 100%;
+  }
+  .chatting-div p {
+    left: 63px;
+  }
+  .chatting-detail h3  {
+    padding: 5px 10px;
+  }
+  .chatting-button form input {
+    width: 86%;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
 }
