@@ -15,7 +15,7 @@ function App() {
   const toggleModle = () => {
     setModal(!modal);
     if (modal) {
-      setFullScreen(false); // Reset fullscreen when closing the modal
+      setFullScreen(false);
     }
   };
 
