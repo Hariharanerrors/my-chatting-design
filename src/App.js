@@ -1,32 +1,44 @@
 import "./App.css";
 import { TbMessageChatbot } from "react-icons/tb";
+import { CgMinimize } from "react-icons/cg";
 import { WiTime8 } from "react-icons/wi";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { GiCancel } from "react-icons/gi";
 import { IoSearchCircle } from "react-icons/io5";
 import { IoMdArrowRoundUp } from "react-icons/io";
 import { useState } from "react";
-function App() {
-  
-  const [modal,setModal] = useState(false);
 
-  const toggleModle =()=> {
-    setModal(!modal)
-  }
+function App() {
+  const [modal, setModal] = useState(false);
+  const [fullScreen, setFullScreen] = useState(false);
+
+  const toggleModle = () => {
+    setModal(!modal);
+    if (modal) {
+      setFullScreen(false); // Reset fullscreen when closing the modal
+    }
+  };
+
+  const toggleFullScreen = () => {
+    setFullScreen(!fullScreen);
+  };
 
   return (
     <div className="App">
-        <div>
-        <TbMessageChatbot className="icon" onClick={toggleModle}/>
-        </div>
+      <div className="toggle">
+        <TbMessageChatbot className="icon" onClick={toggleModle} />
+      </div>
 
-        {modal && (
-          <div className="chatting-box overlay ">
-          <div className="chatting-div " >
+      {modal && (
+        <div className={`chatting-box overlay ${fullScreen ? "fullscreen" : ""}`}>
+          <div className="chatting-div">
             <h4>Q&A Beta</h4>
-            <p href="" ><WiTime8/></p>
-            <p href="" ><HiDotsHorizontal/></p>
-            <p href="" ><GiCancel onClick={toggleModle}/></p>
+            <p href=""><WiTime8 /></p>
+            <p href=""><HiDotsHorizontal /></p>
+            <p href=""><GiCancel onClick={toggleModle} /></p>
+            <p  onClick={toggleFullScreen}>
+            <CgMinimize />
+            </p>
           </div>
 
           <div className="chatting-info">
@@ -40,15 +52,13 @@ function App() {
           </div>
 
           <div className="chatting-button mt-3">
-            <form >
-              <input type="serch" placeholder="Ask AI anything" />
+            <form>
+              <input type="search" placeholder="Ask AI anything" />
               <button type="search"><IoMdArrowRoundUp /></button>
             </form>
-            
           </div>
         </div>
-        )}
-        
+      )}
     </div>
   );
 }
