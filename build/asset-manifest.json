@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/my-chatting-design/static/css/main.5ae75a91.css",
+    "main.js": "/my-chatting-design/static/js/main.963c41b6.js",
+    "index.html": "/my-chatting-design/index.html",
+    "main.5ae75a91.css.map": "/my-chatting-design/static/css/main.5ae75a91.css.map",
+    "main.963c41b6.js.map": "/my-chatting-design/static/js/main.963c41b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ae75a91.css",
+    "static/js/main.963c41b6.js"
+  ]
+}
